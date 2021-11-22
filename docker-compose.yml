@@ -132,6 +132,26 @@ secrets:
     file: ./placeholder-secrets/postgres_user
 volumes:
   db-sync-data:
+    driver: local
+    driver_opts:
+      type: none
+      device: data/sync-data
+      o: bind
   node-db:
+    driver: local
+    driver_opts:
+      type: none
+      device: data/node-db
+      o: bind
   node-ipc:
+    driver: local
+    driver_opts:
+      type: none
+      device: data/node-ipc
+      o: bind
   postgres-data:
+    driver: local
+    driver_opts:
+      type: none
+      device: data/postgres-data
+      o: bind
